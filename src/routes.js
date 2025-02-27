@@ -11,9 +11,9 @@ export default function AppRoutes() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/certificacao-biometrica" element={<CertificacaoBiometrica />} />
-            <Route path="/artes" element={<Artes />} />
-            <Route path="/sobre" element={<Sobre />} />
-            <Route path="/contato" element={<Contato />} />
+            <Route path="/#/artes" element={<Artes />} />
+            <Route path="/#/sobre" element={<Sobre />} />
+            <Route path="/#/contato" element={<Contato />} />
         </Routes>
     );
 }
