@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+}
+
+:root {
+  --background-dark: #020D18;
+  --texto-branco: #FAFAFA;
+  --destaque-branco: #EDEDEF;
+  --desfoque-branco: #B5B5C6;
+  --destaque-amarelo: #E7BC56;
+}
+
+body {
+  background-color: var(--background-dark);
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-top: 2.5rem; /* Distância do header */
+}
+
+
+h1 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: calc(3.5vw); /* Tamanho dinâmico com base na largura da tela */
+  margin: 0;
+  padding: 0;
+  color: var(--texto-branco);
+  white-space: nowrap; /* Impede quebras de linha dentro do h1 */
+  overflow: visible; /* Torna o texto visível e evita esconder */
+}
+
+.apresentacao {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  margin-top: 5rem; /* Distância do header */
+  flex-wrap: wrap; /* Permite que os itens se ajustem na tela menor */
+}
+
+.texto {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 50%;
+}
+
+.texto p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+
+.foto {
+  display: flex;
+  justify-content: flex-start; /* Alinha à esquerda */
+  align-items: flex-start; /* Alinha ao topo */
+  max-width: 30%; /* Limita o tamanho máximo da imagem */
+  position: relative;
+  top: 0; /* Garante que a foto fique alinhada com o topo do texto */
+}
+
+.foto img {
+  width: 100%; /* Tamanho relativo, com base no contêiner */
+  max-width: 312px; /* Tamanho máximo com base no Figma (312px) */
+  height: auto;
+  border-radius: 50%; /* Mantém o formato arredondado */
+  object-fit: cover;
+}
+
+/* Estilo para a palavra "experiências" */
+.experiencia {
+  color: var(--destaque-amarelo);
+}
+
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+
+
+
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .botoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .apresentacao {
+    margin-top: 3rem; /* Ajuste para telas pequenas */
+    gap: 1.5rem; /* Menor espaçamento entre os elementos */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto {
+    align-items: center;
+    text-align: center;
+    max-width: 160%;
+    order: 0;
+    width: auto;
+  }
+
+  .foto {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    width: 20rem;
+    order: -1; /* Garante que a imagem venha primeiro */
+  }
+
+  .foto img {
+    height: auto;
+    width: 200px;
+  }
+
+
+  h1 {
+    font-size: calc(7vw);
+  }
+
+}

@@ -1,0 +1,227 @@
+.card-trabalho {
+    border-radius: 60px;
+    background: #1A2D40;
+    border: 1px solid #626677;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    flex-shrink: 0;
+    height: auto;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    width: 52%;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between; /* Distribui o conteúdo de forma fluida */
+}
+
+.tituloCard {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #E7BC56;
+}
+
+.descricao {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem; /* Ajustando o tamanho para flexibilidade */
+    line-height: 3rem;
+    color: #EDEDEF;
+    max-width: 400px;
+    white-space: pre-line;
+}
+
+.tag-container {
+    display: flex;
+    flex-direction: line;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    padding: 4px 1rem;
+    border: 1px solid #626677;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #EDEDEF;
+}
+
+.elipse {
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: #E7BC56;
+    border-radius: 100%;
+    margin: 0.25rem;
+}
+
+.linhaCard {
+    height: 1px;
+    background: linear-gradient(90deg, #1A2D40 0%, #626677 50%, #1A2D40 100%);
+    width: 100%;
+}
+
+.estatisticas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.estatistica {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+}
+
+.numero {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #EDEDEF;
+}
+
+.texto {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #B5B5C6;
+    margin-top: 0.25rem;
+    white-space: nowrap;
+}
+
+.botao-visualizar {
+    margin-top: 30px;
+    width: 13rem;
+    height: auto;
+    cursor: pointer;
+    transition: opacity 1.0s ease-in-out;
+}
+
+.card-imagem-container {
+    width: 49%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+
+    /* Ajustes no Card de Trabalho */
+    .card-trabalho {
+        flex-direction: column; /* Empilha o conteúdo de forma vertical */
+        justify-content: flex-start; /* Garante que o conteúdo fique no topo do card */
+        height: auto; /* Permite que a altura do card seja ajustada conforme o conteúdo */
+    }
+
+    /* Ajustes na imagem do card */
+    .card-imagem-container {
+        width: 100%; /* A imagem vai ocupar toda a largura do card */
+        height: 100px; /* Definir altura fixa para a imagem */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 1; /* Garante que a imagem venha primeiro */
+    }
+
+    .card-imagem {
+        width: 100%; /* A imagem ocupa toda a largura */
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Ajustes nas informações do card */
+    .card-info {
+        width: 100%; /* A informação ocupa 100% da largura */
+        padding: 1rem; /* Menos padding para o mobile */
+        display: flex;
+        flex-direction: column; /* Empilhar os itens de forma vertical */
+        justify-content: flex-start; /* Garante que o conteúdo fique no topo */
+        order: 2; /* Garante que as informações fiquem abaixo da imagem */
+        align-items: left;
+    }
+
+    /* Ajuste de título */
+    .tituloCard {
+        font-size: 1.2rem; /* Tamanho de fonte ajustado para telas menores */
+        text-align: left; /* Alinha o título à esquerda no mobile */
+        font-family: 'Jost', sans-serif;
+        font-weight: 400;
+        color: #E7BC56;
+    }
+
+    /* Ajuste na descrição */
+    .descricao {
+        font-size: 1.55rem; /* Tamanho de fonte menor para celular */
+        line-height: 2.1rem; /* Melhor espaçamento entre as linhas */
+        max-width: 100%; /* Garante que a descrição ocupe toda a largura */
+        text-align: left; /* Deixa o texto à esquerda */
+        margin-top: 0.5rem;
+    }
+
+    /* Ajustes nas tags */
+    .tag-container {
+        width: 100%;
+        justify-content: left; /* Mantém as tags alinhadas à esquerda */
+        gap: 4px;
+        row-gap: 0.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .tag {
+        font-size: 0.65rem; /* Reduz o tamanho da fonte das tags */
+        padding: 4px 8px; /* Menos padding para não ocupar tanto espaço */
+    }
+
+    /* Ajuste das estatísticas */
+    .estatisticas {
+        flex-direction: column; /* Empilha as estatísticas verticalmente */
+        gap: 1rem;
+        align-items: center; /* Centraliza as estatísticas */
+        margin-top: 1rem;
+        width: 100%; /* Garante que a largura do container seja 100% */
+    }
+
+    .numero {
+        font-size: 3rem; /* Menor tamanho da fonte */
+    }
+
+    .texto {
+        font-size: 1.0rem;
+    }
+
+    /* Botão de visualizar */
+    .botao-visualizar {
+        width: auto; /* O botão ocupa toda a largura */
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .linhaCard {
+        width: 100%; /* Garante que a linha ocupe 100% da largura */
+        height: 1px;
+        background: linear-gradient(90deg, #1A2D40 0%, #626677 50%, #1A2D40 100%);
+        margin: 20px auto; /* Centraliza a linha com margem automática */
+    }
+}
+
+  
