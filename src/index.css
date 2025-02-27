@@ -86,8 +86,8 @@ h1 {
 
 
   body {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .botoes {
@@ -96,10 +96,6 @@ h1 {
     align-content: center;
     gap: 1rem !important;
     margin-top: 1.5rem !important;
-  }
-
-  .botao-img {
-    width: max-content;
   }
 
   .apresentacao {
@@ -132,7 +128,7 @@ h1 {
 
 
   h1 {
-    font-size: calc(6.5vw);
+    font-size: calc(7vw);
   }
 
 }

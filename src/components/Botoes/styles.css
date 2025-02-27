@@ -28,8 +28,6 @@
 }
 
 .botao-img {
-  width: 100%;
-  max-width: 200px;
   transition: transform 0.3s ease;
 }
 
@@ -55,8 +53,5 @@
     width: 90%;  /* Ajusta a largura para preencher a tela */
   }
 
-  .botao-img {
-    width: 100%;  /* Faz com que a imagem ocupe toda a largura disponível */
-    max-width: none;  /* Remover o limite de largura */
-  }
+
 }

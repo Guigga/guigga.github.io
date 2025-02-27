@@ -157,7 +157,7 @@
         flex-direction: column; /* Empilhar os itens de forma vertical */
         justify-content: flex-start; /* Garante que o conteúdo fique no topo */
         order: 2; /* Garante que as informações fiquem abaixo da imagem */
-        align-items: flex-start; /* Ajusta o alinhamento para o lado esquerdo no mobile */
+        align-items: left;
     }
 
     /* Ajuste de título */
@@ -211,7 +211,7 @@
 
     /* Botão de visualizar */
     .botao-visualizar {
-        width: 100%; /* O botão ocupa toda a largura */
+        width: auto; /* O botão ocupa toda a largura */
         margin-top: 2rem;
         text-align: center;
     }
