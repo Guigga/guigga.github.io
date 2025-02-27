@@ -1,0 +1,119 @@
+/* Estilo padrão do menu desktop */
+.nav-bar-desktop {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-bar-desktop ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar-desktop a {
+    text-decoration: none;
+    color: var(--texto-branco);
+    font-size: 1.2rem;
+    transition: font-weight 0.2s ease-in-out;
+}
+
+.nav-bar-desktop a:hover {
+    font-weight: 300;
+}
+
+.nav-bar-desktop a.active {
+    font-weight: 700;
+}
+
+.linkedin-icon img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.linkedin-icon:hover img {
+    transform: scale(1.1);
+}
+
+/* Ícone do menu no mobile */
+.menu-icon {
+    display: none;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+/* Estilos do menu lateral no mobile */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -60%;
+    width: 60%;
+    height: 100vh;
+    background: rgba(2, 13, 24, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+/* Botão de fechar */
+.close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-menu img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Estilos para os links do menu mobile */
+.nav-bar-mobile ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-bar-mobile a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: font-weight 0.2s ease-in-out;
+}
+
+.nav-bar-mobile a:hover {
+    font-weight: 300;
+}
+
+/* Link do LinkedIn dentro do menu mobile */
+.menu-link img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-bar-desktop {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-left: 1.25rem;
+    }
+}
