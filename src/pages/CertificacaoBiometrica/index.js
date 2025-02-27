@@ -6,6 +6,7 @@ import Tag from "../../components/CardTrabalho/Tag";
 import TituloSessao from "../../components/TituloSessao";
 import "./styles.css";
 import diagrama from "../../assets/imgs/diagrama.png";
+import { useEffect } from "react";
 import figmaImage from "../../assets/imgs/figma.png";
 
 // Imagens do Carrossel Desktop
@@ -24,6 +25,7 @@ import mobileCarrossel5 from "../../assets/carrossel/MobileCarrossel-5.png";
 import botaoDireita from "../../assets/carrossel/botão-direita.svg";
 import botaoEsquerda from "../../assets/carrossel/botão-esquerda.svg";
 
+
 export default function CertificacaoBiometrica() {
     const tags = ["UX/UI", "Figma", "Marketplace", "Startup", "Product Design", "Mobile"];
     const imagensCarrosselDesktop = [carrossel1, carrossel2, carrossel3];
@@ -31,6 +33,10 @@ export default function CertificacaoBiometrica() {
     
     const [indexAtualDesktop, setIndexAtualDesktop] = useState(0);
     const [indexAtualMobile, setIndexAtualMobile] = useState(0);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const avancarImagemDesktop = () => {
         setIndexAtualDesktop((prevIndex) => (prevIndex + 1) % imagensCarrosselDesktop.length);
