@@ -39,7 +39,6 @@
 }
 
 /* Container da imagem para cobrir a tela toda */
-/* Container da imagem para cobrir a tela toda */
 .imagem-fullscreen {
     width: 100vw; /* Ocupa 100% da largura da tela */
     max-width: 98.8vw; /* Garante que nunca ultrapasse a largura da tela */
@@ -121,7 +120,6 @@
     color: #EDEDEF;
     margin-top: 4rem;
     margin-bottom: 1.5rem;
-
 }
 
 .descricao-secao {

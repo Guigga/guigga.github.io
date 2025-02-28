@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Importação do Link
 import linkedInDefault from "../../assets/imgs/LinkedIn-Default.svg";
 import linkedInHover from "../../assets/imgs/LinkedIn-Hoover.svg";
 import menuIcon from "../../assets/imgs/Menu.svg";
@@ -27,10 +28,10 @@ const NavBar = () => {
 
                 <nav className="nav-bar-mobile">
                     <ul>
-                        <li><a href="/" onClick={() => setIsOpen(false)}>Home</a></li>
-                        <li><a href="/artes" onClick={() => setIsOpen(false)}>Artes</a></li>
-                        <li><a href="/sobre" onClick={() => setIsOpen(false)}>Sobre</a></li>
-                        <li><a href="/contato" onClick={() => setIsOpen(false)}>Contato</a></li>
+                        <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li> {/* Alterado para Link */}
+                        <li><Link to="/artes" onClick={() => setIsOpen(false)}>Artes</Link></li> {/* Alterado para Link */}
+                        <li><Link to="/sobre" onClick={() => setIsOpen(false)}>Sobre</Link></li> {/* Alterado para Link */}
+                        <li><Link to="/contato" onClick={() => setIsOpen(false)}>Contato</Link></li> {/* Alterado para Link */}
                     </ul>
                 </nav>
 
@@ -49,10 +50,10 @@ const NavBar = () => {
             {/* Menu desktop normal */}
             <nav className="nav-bar-desktop">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/artes">Artes</a></li>
-                    <li><a href="/sobre">Sobre</a></li>
-                    <li><a href="/contato">Contato</a></li>
+                    <li><Link to="/">Home</Link></li> {/* Alterado para Link */}
+                    <li><Link to="/artes">Artes</Link></li> {/* Alterado para Link */}
+                    <li><Link to="/sobre">Sobre</Link></li> {/* Alterado para Link */}
+                    <li><Link to="/contato">Contato</Link></li> {/* Alterado para Link */}
                 </ul>
                 <a 
                     href="https://www.linkedin.com/in/gcarmo/" 
