@@ -15,7 +15,7 @@
     text-decoration: none;
     color: var(--texto-branco);
     font-size: 1.2rem;
-    transition: font-weight 0.2s ease-in-out;
+    transition: font-weight 0.2s ease-in-out, color 0.2s ease-in-out; /* Adicionando transição para a cor */
 }
 
 .nav-bar-desktop a:hover {
@@ -24,16 +24,8 @@
 
 .nav-bar-desktop a.active {
     font-weight: 700;
-}
-
-.linkedin-icon img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.linkedin-icon:hover img {
-    transform: scale(1.1);
+    font-size: 1.3rem;
+    color: #FAFAFA; /* Cor desejada para o item ativo */
 }
 
 /* Ícone do menu no mobile */
@@ -93,7 +85,7 @@
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
-    transition: font-weight 0.2s ease-in-out;
+    transition: font-weight 0.2s ease-in-out, color 0.2s ease-in-out; /* Transição da cor no hover */
 }
 
 .nav-bar-mobile a:hover {
@@ -105,6 +97,16 @@
     width: 32px;
     height: 32px;
 }
+
+/* Estilo para os links desabilitados */
+.nav-bar-desktop a.desabilitado,
+.nav-bar-mobile a.desabilitado {
+    color: var(--desfoque-branco); /* Cor para itens desabilitados */
+    pointer-events: none; /* Desabilita a interação (cliques) */
+    font-weight: normal; /* Mantém o peso normal da fonte */
+}
+
+
 
 /* Responsividade */
 @media (max-width: 768px) {
