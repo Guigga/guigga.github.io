@@ -1,6 +1,72 @@
-.contato-page {
+.contato-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 8rem;
+  }
+  
+  .contato-titulo {
+    font-family: "Jost", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #e7bc56;
+  }
+  
+  .contato-texto {
+    font-family: "Jost", sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 2rem;
+  }
+  
+  .contato-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  
+  .contato-item {
+    display: flex;
     align-items: center;
-    justify-content: center;
-}
+    gap: 0.5rem;
+  }
+  
+  .contato-item img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .contato-item span {
+    font-family: "Jost", sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    padding-left: 0.5rem;
+  }
+  
+  .botoes {
+    margin-top: 4rem;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .contato-container {
+      align-items: center;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+  
+    .contato-info {
+      align-items: center;
+      padding-top: 2rem;
+    }
+
+    .botoes {
+      padding-top: 2rem;
+    }
+  
+  }
+  
