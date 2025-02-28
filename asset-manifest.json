@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3d134ae3.css",
-    "main.js": "/static/js/main.e8018ea0.js",
+    "main.css": "/static/css/main.8edc14e9.css",
+    "main.js": "/static/js/main.b1da2a3c.js",
     "static/media/laptopMuu.jpg": "/static/media/laptopMuu.b01812c5b2f7225b21fa.jpg",
     "static/media/DesktopCarrossel-1.png": "/static/media/DesktopCarrossel-1.26a179d6fae1712cbd8f.png",
     "static/media/DesktopCarrossel-2.png": "/static/media/DesktopCarrossel-2.5ad3d0c51905dce21464.png",
@@ -34,11 +34,11 @@
     "static/media/mail.svg": "/static/media/mail.bbc6a274d37a208cfe45e2b793b4d8ff.svg",
     "static/media/Menu.svg": "/static/media/Menu.2d2f01ba93429f9f9c16e4ea967c54f1.svg",
     "static/media/Close.svg": "/static/media/Close.b766757e8e6160761804c977096990cf.svg",
-    "main.3d134ae3.css.map": "/static/css/main.3d134ae3.css.map",
-    "main.e8018ea0.js.map": "/static/js/main.e8018ea0.js.map"
+    "main.8edc14e9.css.map": "/static/css/main.8edc14e9.css.map",
+    "main.b1da2a3c.js.map": "/static/js/main.b1da2a3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d134ae3.css",
-    "static/js/main.e8018ea0.js"
+    "static/css/main.8edc14e9.css",
+    "static/js/main.b1da2a3c.js"
   ]
 }
