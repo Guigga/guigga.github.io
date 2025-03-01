@@ -1,19 +1,21 @@
-import perfil from '../../assets/imgs/Perfil.jpg';
-import Botoes from '../Botoes';
+import React from "react";
+import Botoes from "../Botoes";
+import "./styles.css";
 
-const Apresentacao = () => {
+const Apresentacao = ({ titulo, descricao, foto }) => {
   return (
     <section className="apresentacao">
       <div className="texto">
-        <h1>
-          Product Designer - UX / UI<br />
-          Há +2 anos transformando<br />
-          ideias em <span className="experiencia">experiências</span>
-        </h1>
+        {/* Usamos dangerouslySetInnerHTML para injetar o HTML do título com destaque */}
+        <h1 dangerouslySetInnerHTML={{ __html: titulo }} />
+        <p>{descricao}</p>
+        
+        {/* Garante que os botões LinkedIn e Currículo estejam sempre presentes */}
         <Botoes mostrar="todos" />
       </div>
+      
       <div className="foto">
-        <img src={perfil} alt="Foto do perfil" />
+        <img src={foto} alt="Foto do perfil" />
       </div>
     </section>
   );

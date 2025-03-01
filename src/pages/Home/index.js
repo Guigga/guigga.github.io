@@ -3,7 +3,7 @@ import React from "react";
 // Meus imports
 import styles from './styles.css';
 import Header from '../../components/Header';
-import Apresentacao from "../../components/Apresentacao";
+import Tabs from "../../components/Tabs";
 import TituloSessao from "../../components/TituloSessao"; // Importando o novo componente
 import CardTrabalho from "../../components/CardTrabalho";
 import Contratar from '../../components/Contratar';
@@ -15,7 +15,7 @@ export default function Home() {
     return (
         <>
             <Header />
-            <Apresentacao />
+            <Tabs />
             
             {/* Títulos das sessões*/}
             <TituloSessao

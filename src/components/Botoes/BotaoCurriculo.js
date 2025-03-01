@@ -1,6 +1,5 @@
 import React from 'react';
-import curriculoButtonDefault from '../../assets/imgs/CurriculoButton-Default.svg';
-import curriculoButtonHover from '../../assets/imgs/CurriculoButton-Hoover.svg';
+import documentoIcon from '../../assets/imgs/DocumentoIcon.svg';
 import './styles.css';
 
 const BotaoCurriculo = () => {
@@ -11,13 +10,8 @@ const BotaoCurriculo = () => {
       target="_blank" 
       rel="noopener noreferrer"
     >
-      <img
-        src={curriculoButtonDefault}
-        alt="Currículo"
-        className="botao-img"
-        onMouseOver={(e) => (e.target.src = curriculoButtonHover)}
-        onMouseOut={(e) => (e.target.src = curriculoButtonDefault)}
-      />
+      <span className="botao-texto">Currículo</span>
+      <img src={documentoIcon} alt="Ícone Documento" className="botao-icon" />
     </a>
   );
 };

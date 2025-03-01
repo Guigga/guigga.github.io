@@ -19,35 +19,35 @@ body {
   background-color: var(--background-dark);
   padding-left: 6rem;
   padding-right: 6rem;
-  padding-top: 2.5rem; /* Distância do header */
+  padding-top: 2.5rem;
 }
 
 
 h1 {
   font-family: 'Jost', sans-serif;
   font-weight: 500;
-  font-size: calc(3.5vw); /* Tamanho dinâmico com base na largura da tela */
+  font-size: calc(3.5vw);
   margin: 0;
   padding: 0;
   color: var(--texto-branco);
-  white-space: nowrap; /* Impede quebras de linha dentro do h1 */
+  white-space: normal; /* Impede quebras de linha dentro do h1 */
   overflow: visible; /* Torna o texto visível e evita esconder */
 }
 
 .apresentacao {
   display: flex;
   justify-content: space-between;
-  align-items: left;
-  margin-top: 5rem; /* Distância do header */
-  flex-wrap: wrap; /* Permite que os itens se ajustem na tela menor */
+  align-items: flex-start;
+  width: 100%; /* Ocupa toda a largura da tela */
+  flex-wrap: wrap;
 }
 
 .texto {
-  max-width: 50%;
+  max-width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: left;
-  width: 50%;
+  width: 100%;
 }
 
 .texto p {
@@ -59,28 +59,23 @@ h1 {
 
 .foto {
   display: flex;
-  justify-content: flex-start; /* Alinha à esquerda */
-  align-items: flex-start; /* Alinha ao topo */
-  max-width: 30%; /* Limita o tamanho máximo da imagem */
+  justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
-  top: 0; /* Garante que a foto fique alinhada com o topo do texto */
+  top: 0; 
 }
 
 .foto img {
-  width: 100%; /* Tamanho relativo, com base no contêiner */
-  max-width: 312px; /* Tamanho máximo com base no Figma (312px) */
   height: auto;
-  border-radius: 50%; /* Mantém o formato arredondado */
+  border-radius: 50%;
   object-fit: cover;
 }
 
-/* Estilo para a palavra "experiências" */
 .experiencia {
   color: var(--destaque-amarelo);
 }
 
 
-/* Media Query para telas menores */
 @media (max-width: 768px) {
 
 
@@ -99,8 +94,8 @@ h1 {
   }
 
   .apresentacao {
-    margin-top: 3rem; /* Ajuste para telas pequenas */
-    gap: 1.5rem; /* Menor espaçamento entre os elementos */
+    margin-top: 3rem; 
+    gap: 1.5rem; 
     flex-direction: column;
     align-items: center;
   }
@@ -116,14 +111,11 @@ h1 {
   .foto {
     display: flex;
     justify-content: center;
-    max-width: 100%;
-    width: 20rem;
-    order: -1; /* Garante que a imagem venha primeiro */
+    order: -1; 
   }
 
   .foto img {
     height: auto;
-    width: 200px;
   }
 
 

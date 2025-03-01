@@ -1,0 +1,38 @@
+/* Container das Tabs */
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Mantendo alinhado à esquerda */
+    margin-bottom: 2rem;
+}
+
+/* Estilizando as Tabs */
+.tabs {
+    display: flex;
+    gap: 1rem;
+    padding-top: 6.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilo base das Tabs */
+.tab {
+    font-family: "Jost", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 220; /* Light */
+    color: #B5B5C6; /* Cor do texto quando não está selecionado */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Tab selecionada */
+.tab.ativa {
+    font-weight: 420; /* Regular */
+    color: #FAFAFA;
+}
+
+/* Hover */
+.tab:hover {
+    color: #FAFAFA;
+}

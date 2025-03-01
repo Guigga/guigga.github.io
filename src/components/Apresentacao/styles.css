@@ -3,12 +3,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 2rem;
 }
 
 /* Texto */
 .texto {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -16,15 +14,32 @@
 
 /* Foto */
 .foto {
-    flex: 1;
     display: flex;
     justify-content: center;
 }
 
 .foto img {
-    max-width: 200px;
     border-radius: 50%;
+    overflow: clip;
 }
+
+
+
+/* Estilos gerais para o título */
+h1 {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.destaque {
+  color: #E7BC56; /* Exemplo de cor de destaque, você pode alterar */
+  font-weight: bold;
+}
+
 
 /* Media Query para telas menores */
 @media (max-width: 768px) {
@@ -45,16 +60,6 @@
     max-width: 90%;
   }
 
-  .foto {
-    width: 20rem;
-    order: -1; /* Garante que a imagem venha primeiro */
-  }
-
-  .foto img {
-    max-width: 80vw; /* Aumenta o tamanho da foto proporcionalmente */
-    height: auto;
-  }
-
   .botoes {
     flex-direction: column;
     align-items: center;
@@ -68,3 +73,4 @@
   }
 
 }
+

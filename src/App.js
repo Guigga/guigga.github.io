@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router } from "react-router-dom"; // Alterado de BrowserRouter para HashRouter
+import { HashRouter as Router } from "react-router-dom";
 import AppRoutes from "./routes";
 
 function App() {

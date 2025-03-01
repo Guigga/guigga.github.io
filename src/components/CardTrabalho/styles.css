@@ -13,7 +13,7 @@
 .card-info {
     display: flex;
     flex-direction: column;
-    width: 52%;
+    width: 50%;
     padding: 3rem;
     display: flex;
     justify-content: space-between; /* Distribui o conteúdo de forma fluida */
@@ -32,18 +32,15 @@
     font-size: 2.5rem; /* Ajustando o tamanho para flexibilidade */
     line-height: 3rem;
     color: #EDEDEF;
-    max-width: 400px;
     white-space: pre-line;
 }
 
 .tag-container {
     display: flex;
-    flex-direction: line;
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
     gap: 10px;
-    margin-top: 1rem;
 }
 
 .tag {
@@ -87,14 +84,14 @@
 .numero {
     font-family: 'Jost', sans-serif;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 2.6rem;
     color: #EDEDEF;
 }
 
 .texto {
     font-family: 'Jost', sans-serif;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: #B5B5C6;
     margin-top: 0.25rem;
     white-space: nowrap;
@@ -169,7 +166,6 @@
         color: #E7BC56;
     }
 
-    /* Ajuste na descrição */
     .descricao {
         font-size: 1.55rem; /* Tamanho de fonte menor para celular */
         line-height: 2.1rem; /* Melhor espaçamento entre as linhas */
@@ -185,35 +181,38 @@
         gap: 4px;
         row-gap: 0.4rem;
         margin-bottom: 1rem;
+        padding-top: 1rem;
     }
 
     .tag {
-        font-size: 0.65rem; /* Reduz o tamanho da fonte das tags */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte das tags */
         padding: 4px 8px; /* Menos padding para não ocupar tanto espaço */
     }
 
     /* Ajuste das estatísticas */
     .estatisticas {
-        flex-direction: column; /* Empilha as estatísticas verticalmente */
+        flex-direction: row; /* Empilha as estatísticas verticalmente */
         gap: 1rem;
         align-items: center; /* Centraliza as estatísticas */
         margin-top: 1rem;
+        margin-bottom: 2.5rem;
+        justify-content: space-around;
         width: 100%; /* Garante que a largura do container seja 100% */
     }
 
     .numero {
-        font-size: 3rem; /* Menor tamanho da fonte */
+        font-size: 1.6rem; /* Menor tamanho da fonte */
     }
 
     .texto {
-        font-size: 1.0rem;
+        font-size: 0.85rem;
     }
 
     /* Botão de visualizar */
     .botao-visualizar {
-        width: auto; /* O botão ocupa toda a largura */
         margin-top: 2rem;
         text-align: center;
+        align-self: center;
     }
 
     .linhaCard {
