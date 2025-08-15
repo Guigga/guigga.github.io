@@ -66,7 +66,7 @@ export default function CertificacaoBiometrica() {
             <div className="certificacao-intro">
                 <h1 className="titulo-certificacao">Certificação Biométrica</h1>
                 <h2 className="subtitulo-certificacao">
-                    Ecosistema de rastreabilidade para o Mercado Agro
+                    Ecossistema de rastreabilidade para o Mercado Agro
                 </h2>
 
                 {/* Tags */}

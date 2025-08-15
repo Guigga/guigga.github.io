@@ -46,7 +46,7 @@ export default function CardTrabalho() {
             <div className="card-info">
                 <h2 className="tituloCard">Mercado Agro</h2>
                 <p className="descricao">
-                    Ecosistema de rastreabilidade para o Mercado Agro
+                    Ecossistema de rastreabilidade para o Mercado Agro
                 </p>
 
                 <div className="tag-container">
