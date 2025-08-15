@@ -18,7 +18,7 @@ export default function Home() {
             
             {/* Títulos das sessões*/}
             <TituloSessao
-                titulo="Meus Trabalhooooooooooooooooooos"
+                titulo="Meus Trabalhoooooooooooooooooooos"
                 subtitulo="Casos selecionados"
             />
 
