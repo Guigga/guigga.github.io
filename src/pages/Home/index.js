@@ -1,7 +1,6 @@
 import React from "react";
 
 // Meus imports
-import styles from './styles.css';
 import Header from '../../components/Header';
 import Tabs from "../../components/Tabs";
 import TituloSessao from "../../components/TituloSessao"; // Importando o novo componente

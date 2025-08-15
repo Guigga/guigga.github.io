@@ -7,7 +7,6 @@ import TituloSessao from "../../components/TituloSessao";
 import "./styles.css";
 import diagrama from "../../assets/imgs/diagrama.png";
 import { useEffect } from "react";
-import figmaImage from "../../assets/imgs/figma.png";
 
 // Imagens do Carrossel Desktop
 import carrossel1 from "../../assets/carrossel/DesktopCarrossel-1.png";
