@@ -1,0 +1,55 @@
+# Nome do seu workflow
+name: Deploy Portfolio
+
+# Gatilho: Roda toda vez que você der 'push' na branch 'main'
+on:
+  push:
+    branches:
+      - main # ou master, dependendo do nome da sua branch principal
+
+# Tarefas a serem executadas
+jobs:
+  build-and-deploy:
+    # Usa a versão mais recente do Ubuntu como ambiente
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Baixa o seu código do repositório
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Configura o ambiente Node.js para construir o projeto
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a versão do Node que seu projeto usa
+      
+      # 3. Instala as dependências e gera a pasta 'build'
+      - name: Install dependencies and build
+        run: |
+          npm ci
+          npm run build
+
+      # 4. Envia a pasta 'build' para o seu servidor
+      - name: Deploy to Server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          source: "build" # Pasta de origem
+          target: "~/"   # Pasta de destino no servidor
+
+      # 5. Move os arquivos para a pasta do Nginx no seu servidor
+      - name: Activate new version
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            sudo rm -rf /var/www/html/*
+            sudo cp -r ~/build/* /var/www/html/
+            echo "Deploy concluído!"
